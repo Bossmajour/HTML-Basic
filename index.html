@@ -11,14 +11,14 @@
     <div>
          
         <p class="italic"> <label for="name" class="ayo"> NAME </label>
-        <input type ="text "id="fname" name="fname" placeholder="spongepants" required>
+        <input type ="text "id="name" name="name" placeholder="spongepants" required>
     </p>
     </div>
         <br>
 
     <div>
         <label for="email" class="ayobami">EMAIL:</label>
-        <input type ="email"id="email"  name="email" placeholder="ayo@gmail.com">
+        <input type ="email"id="email"  name="email" placeholder="ayo@gamil.com">
     </div>
 
      <div>
@@ -54,7 +54,10 @@ form.addEventListener('submit', function(event) {
 event.preventDefault();
 const nameInput = document.querySelector('#name');
 	const name = nameInput.value.trim();
-	alert(`Thanks for submitting the form, ${name}!`);
+	const emailInput = document.getElementById('email');
+ const emailValue = emailInput.value; 
+    alert(`Thanks for submitting the form, ${name}!`);
+    alert(`The email is correct, ${emailInput.value}!`);
 form.reset();
 	}); 
 </script>
