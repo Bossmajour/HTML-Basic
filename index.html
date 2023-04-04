@@ -47,10 +47,16 @@
 </form >
 
 
-<script type="text/javascript">
-    function myFunction() {
-       alert ("The form is submitted");
-    }
+<script >
+   		// Additional cool feature: greet the user by name when they submit the form
+		const form = document.querySelector('form');
+form.addEventListener('submit', function(event) {
+event.preventDefault();
+const nameInput = document.querySelector('#name');
+	const name = nameInput.value.trim();
+	alert(`Thanks for submitting the form, ${name}!`);
+form.reset();
+	}); 
 </script>
 
 </body>
